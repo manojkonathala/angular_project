@@ -10,3 +10,25 @@
     border: 1px solid black; 
 
   }
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .table-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+  }
+
+  .header-row {
+    font-weight: bold;
+  }
+
+  .table-cell {
+    flex: 1;
+    padding: 0 10px;
+  }

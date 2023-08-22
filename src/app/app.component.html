@@ -6,7 +6,7 @@
 <!--TODO trackby-->
 
 <section>
-  <h1>Get ALL Employees</h1>
+  <!-- <h1>Get ALL Employees</h1>
   <div class="flex-container">
  
     <div class="flex-item">id</div>
@@ -22,9 +22,26 @@
     <div class="flex-item">{{employee.id}}</div>
     <div class="flex-item">{{employee.employee_age}}</div>
     <div class="flex-item">{{employee.employee_name}}</div>
-  jjhgkjhjhghjghjghjghjghjghjggghjghjhjgghjhjghgjjhghjghgjhjgghj
-    <div class="flex-item">{{employee.employee_salary}}</div>
   
+    <div class="flex-item">{{employee.employee_salary}}</div> -->
 
-  </div>
+    <div class="table-container">
+      <div class="table-row header-row">
+        <div class="table-cell">id</div>
+        <div class="table-cell">employee_age</div>
+        <div class="table-cell">employee_name</div>
+        <div class="table-cell"> employee_salary</div>
+        <div class="table-cell"> Actions</div>
+      </div>
+      <div class="table-row" *ngFor="let employee of employees;" >
+        <div class="table-cell">{{employee.id}}</div>
+        <div class="table-cell">{{employee.employee_age}}</div>
+        <div class="table-cell">{{employee.employee_name}}</div>
+        <div class="table-cell">{{employee.employee_salary}}</div>
+        <div class="table-cell"><button (click)="viewEmployee($event)">View</button></div>
+      </div>
+      
+      
+      <!-- Add more data rows as needed -->
+    </div>
 </section>

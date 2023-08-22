@@ -33,4 +33,14 @@ export class AppComponent implements OnInit{
       //   console.log(deleteEmployee)
       // });
   }
+  viewEmployee(event : Event){
+    console.log(event);
+    alert('Hi Mama');
+    // Window object(TO Access Browser Access) vs Document Object(To access HTML )
+    // window.scrollTo(0,0)
+    // Scroll to the end of the page
+    window.scrollTo(0, document.body.scrollHeight);
+
+
+  }
 }
