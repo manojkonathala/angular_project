@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
       this.employeesService.getAllEmployee().subscribe((employees)=>{
         this.employees=employees.data;
       });
-      
       // this.employeesService.getEachEmployeeDetails(1).subscribe((EACH_EMPLOYEE:any)=>{
       //   console.log(EACH_EMPLOYEE)
       // });
@@ -41,8 +40,6 @@ export class AppComponent implements OnInit{
     // window.scrollTo(0,0)
     // Scroll to the end of the page
     window.scrollTo(0, document.body.scrollHeight);
-
-
 
 
   }
