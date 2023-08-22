@@ -40,7 +40,7 @@ export class AppComponent implements OnInit{
     // window.scrollTo(0,0)
     // Scroll to the end of the page
     window.scrollTo(0, document.body.scrollHeight);
-
+//test
 
   }
 }
