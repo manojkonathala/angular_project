@@ -28,16 +28,17 @@
     <div class="table-container">
       <div class="table-row header-row">
         <div class="table-cell">id</div>
+        <div class="table-cell">Employee_name</div>
         <div class="table-cell">employee_age</div>
-        <div class="table-cell">employee_name</div>
         <div class="table-cell"> employee_salary</div>
         <div class="table-cell"> Actions</div>
       </div>
       <div class="table-row" *ngFor="let employee of employees;" >
-        <div class="table-cell">{{employee.id}}</div>
-        <div class="table-cell">{{employee.employee_age}}</div>
-        <div class="table-cell">{{employee.employee_name}}</div>
-        <div class="table-cell">{{employee.employee_salary}}</div>
+        <div class="table-cell">{{employee.getId}}</div>
+        <div class="table-cell">{{employee.getFullName}}</div>
+        <div class="table-cell">{{employee.getEmployeeAge}}</div>
+
+        <div class="table-cell">{{employee.getEmployeeSalary}}</div>
         <div class="table-cell"><button (click)="viewEmployee($event)">View</button></div>
       </div>
       

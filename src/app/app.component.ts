@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeesService } from './employees.service';
-import { Employee } from './types/employees.type';
+import { Employee } from './models/employees.model';
+
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
       this.employeesService.getAllEmployee().subscribe((employees)=>{
-        this.employees=employees.data;
+        this.employees=employees.getData;
       });
       // this.employeesService.getEachEmployeeDetails(1).subscribe((EACH_EMPLOYEE:any)=>{
       //   console.log(EACH_EMPLOYEE)

@@ -2,6 +2,8 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import {EMPLOYEES} from './empoyees.constants'
 import { GetAllEmployeeResponse } from "./types/employees.type";
+import { map } from "rxjs";
+import { EmployeeData } from "./models/employees.model";
 
 @Injectable()
 export class EmployeesService{
@@ -16,7 +18,16 @@ constructor(private http:HttpClient){}
 //     return this.http.get(EMPLOYEES.ALL_EMPLOYEES,{responseType: 'json'});
 // }
 getAllEmployee(){
-    return this.http.get<GetAllEmployeeResponse>(EMPLOYEES.ALL_EMPLOYEES,{responseType: 'json'});
+    //return this.http.get<GetAllEmployeeResponse>(EMPLOYEES.ALL_EMPLOYEES,{responseType: 'json'});
+    return this.http.get<GetAllEmployeeResponse>(EMPLOYEES.ALL_EMPLOYEES,{responseType: 'json'}).pipe(
+        map((data)=>{
+             data.message = "Hello buddies"
+             return data
+        }),
+        map((data)=>{
+            return new EmployeeData().deserialize(data)
+        })
+    );
 }
 
 //TODO get each employee details
